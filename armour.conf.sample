@@ -133,6 +133,9 @@ set arm(cfg.servicehost) "undernet.org"
 # -- change with care to suit your own network
 set arm(cfg.xregex) {([^\.]+)\.users\.undernet\.org}
 
+# -- host hiding regex
+set arm(cfg.xhost) "(\[^\.\]+).users.undernet.org"
+
 # -- non-regex extension for umode +x registered users
 # -- change to suit your own network
 set arm(cfg.xhost.ext) "users.undernet.org"
@@ -140,8 +143,8 @@ set arm(cfg.xhost.ext) "users.undernet.org"
 # -- allow use of nickname (with or without nick completion char :) as control char? (0|1) - [1]
 set arm(cfg.char.nick) 1
 
-# -- require table completion char ':' on nickname prefix?  (0|1) - [1]
-set arm(cfg.char.tab) 1
+# -- require table completion char ':' on nickname prefix?  (0|1) - [0]
+set arm(cfg.char.tab) 0
 
 # -- allow global prefix char '*'  (0|1) - [0]
 set arm(cfg.char.glob) 1
@@ -151,25 +154,6 @@ set arm(cfg.char.glob) 1
 # a = add		v = view		r = rem
 # e = exempt	s = stats		t = topic
 # o = op		d = deop		u = userlist
-set arm(cfg.cmd.short) 1
-
-# -- host hiding regex
-set arm(cfg.xhost) "(\[^\.\]+).users.undernet.org"
-
-# -- allow use of nickname (with or without nick completion char :) as control char? (0|1) - [1]
-set arm(cfg.char.nick) 1
-
-# -- require tab completion char ':' on nickname prefix?  (0|1) - [1]
-set arm(cfg.char.tab) 0
-
-# -- allow global prefix char '*'  (0|1) - [0]
-set arm(cfg.char.glob) 1
-
-# -- allow command shortcuts? (0|1) - [1]
-# k = kick              kb = kickban            b = black
-# a = add               v = view                r = rem
-# e = exempt            s = stats               t = topic
-# o = op                d = deop                u = userlist
 set arm(cfg.cmd.short) 1
 
 # -- default mode on load? (on|off|secure) - [on]
