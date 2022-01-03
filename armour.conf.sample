@@ -678,27 +678,27 @@ set addcmd(conf)		{	arm		500		pub msg dcc	}
 set files {
 
 	# -- Armour
-	./armour/armour-3.5.1.tcl					# change this to match the relevant version
+	./armour/armour-3.5.1.tcl			# change this to match the relevant version
 	
 	# -- plugins (optional)
-	#./armour/plugins/smsbot.tcl				# smsglobal plugin
-	#./armour/plugins/trakka.tcl				# trakka plugin
-	#./armour/plugins/tell.tcl					# tell plugin
-	#./armour/plugins/push.tcl					# pushover plugin
+	#./armour/plugins/smsbot.tcl			# smsglobal plugin
+	#./armour/plugins/trakka.tcl			# trakka plugin
+	#./armour/plugins/tell.tcl			# tell plugin
+	#./armour/plugins/push.tcl			# pushover plugin
 	#./armour/plugins/ext/libdronebl.tcl		# dronebl plugin
-	#./armour/plugins/email.tcl					# email plugin
-	#./armour/plugins/quote.tcl					# quote plugin
+	#./armour/plugins/email.tcl			# email plugin
+	#./armour/plugins/quote.tcl			# quote plugin
 	
 	# -- private plugins
-	#./armour/plugins/sk/usernames.tcl			# usernames plugin
-	#./armour/plugins/apprelay.tcl				# cservice application relay
-	#./armour/plugins/ipr.tcl					# cservice ipr match
-	#./armour/plugins/totp.tcl					# cservice TOTP match
-	#./armour/plugins/lastlog.tcl				# cservice username lastlog
-	#./armour/plugins/brute.tcl					# cservice bruteforce attempts
+	#./armour/plugins/sk/usernames.tcl		# usernames plugin
+	#./armour/plugins/apprelay.tcl			# cservice application relay
+	#./armour/plugins/ipr.tcl			# cservice ipr match
+	#./armour/plugins/totp.tcl			# cservice TOTP match
+	#./armour/plugins/lastlog.tcl			# cservice username lastlog
+	#./armour/plugins/brute.tcl			# cservice bruteforce attempts
 	#./armour/plugins/usernames/sitestatus.tcl	# cservice sitestatus
-	#./armour/plugins/csclive.tcl				# cservice live data
-	
+	#./armour/plugins/csclive.tcl			# cservice live data
+
 }
 
 
@@ -708,12 +708,12 @@ foreach script $data {
 	# -- only load wanted scripts
 	set i [lindex $script 0]
 	if {[regexp -- {.tcl$} $i] && [string index $i 0] != "#"} {
-			# -- capture any errors to not crash the bot (safety)
-			putlog "\[@\] Armour: loading $i ..."
-			catch {source $i} error
-			if {$error != ""} {
-					putloglev d * "\002(Armour load error)\002:$i\: $::errorInfo"
-			}
+		# -- capture any errors to not crash the bot (safety)
+		putlog "\[@\] Armour: loading $i ..."
+		catch {source $i} error
+		if {$error != ""} {
+			putloglev d * "\002(Armour load error)\002:$i\: $::errorInfo"
+		}
 	}
 }
 
@@ -724,4 +724,3 @@ foreach script $data {
 
 
 putlog "\[@\] Armour $arm(version) Loaded (empus@undernet.org)"
-
