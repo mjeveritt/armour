@@ -12,19 +12,19 @@
 #
 # Armour be be placed in one of three modes:
 #	ON		:	Automatic scans upon client channel /join
-#	SECURE	:	Channel mode +Dm with actions post-scan
+#	SECURE		:	Channel mode +Dm with actions post-scan
 #	OFF		:	Manual scans only
 #
 # ------------------------------------------------------------------------------------------------
 # SUPPORTING
 # ------------------------------------------------------------------------------------------------
 #
-# 	whitelists
+#	whitelists
 #	blacklists
-#	dnsbl scans	 :	- dnswl exemptions supported
-#					- remote 'bounce' bot supported
-#	proxy scans	 :	remote 'bounce' bot supported
-#	onchan scans :	remote 'bounce' bot supported
+#	dnsbl scans	:	- dnswl exemptions supported
+#				- remote 'bounce' bot supported
+#	proxy scans	:	remote 'bounce' bot supported
+#	onchan scans	:	remote 'bounce' bot supported
 #
 # ------------------------------------------------------------------------------------------------
 # WHITELIST & BLACKLIST TYPES:
@@ -35,7 +35,7 @@
 #	regex	:		nick!user@host/rname
 #	text	:		channel text matches
 #	country	:		geo location ip lookup
-#	asn	:			autonomous system number lookup
+#	asn	:		autonomous system number lookup
 #	chan	:		onchan #channel
 #	rname	:		realname
 #
@@ -62,14 +62,14 @@
 # 
 # ------------------------------------------------------------------------------------------------
 #
-# Code by		: 	Empus @ Undernet - empus@undernet.org
+# Code by		:	Empus @ Undernet - empus@undernet.org
 # Last modified	:	2020.02.05
 #
 # Please contact me should you need any assistence, but I hope most config options are explanatory.
 #
 # Issues and feature requests can be submitted on GitHub:
 #
-# 		https://github.com/empus/armour
+#		https://github.com/empus/armour
 #
 # ------------------------------------------------------------------------------------------------
 
